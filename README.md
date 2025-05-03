@@ -61,14 +61,14 @@ Por último aplicamos la transformada wavelet para analizar los componentes frec
 
 Se muestra de esta manera:
 
-![image](https://github.com/user-attachments/assets/9097f53d-6d35-49de-8106-a57a6c5801c4)[
+![image](https://github.com/user-attachments/assets/9097f53d-6d35-49de-8106-a57a6c5801c4)
 
 ## Análisis de resultados:
-
+Durante el procesamiento de la señal ECG, se estimó correctamente una frecuencia de muestreo adecuada para análisis cardiaco. Luego, se eliminó el componente DC y se aplicó un filtro pasa altas de 20 Hz, lo cual permitió resaltar de forma más clara los complejos QRS. La obtención de la envolvente mediante la transformada de Hilbert evidenció modulaciones suaves, posiblemente asociadas a la respiración. El análisis en frecuencia a través de la Transformada de Fourier mostró energía distribuida principalmente en bandas del ECG, lo que sugiere una señal de buena calidad. Los picos R fueron detectados con éxito en la señal filtrada, permitiendo calcular los intervalos R-R, cuya media y desviación estándar ofrecen información clave sobre la variabilidad cardíaca (HRV). Finalmente, el análisis tiempo-frecuencia mediante la Transformada Wavelet Continua (CWT) reveló componentes relevantes dentro de las bandas de baja (LF: 0.04–0.15 Hz) y alta frecuencia (HF: 0.15–0.4 Hz), las cuales están relacionadas con la actividad del sistema nervioso autónomo: la banda LF refleja influencia simpática y parasimpática combinadas, mientras que la banda HF se asocia predominantemente a la modulación parasimpática relacionada con la respiración.
 
 ## Conclusiones:
+El procesamiento realizado permitió extraer información fisiológicamente significativa de la señal ECG. La calidad de la señal filtrada y la correcta detección de picos R permitieron un análisis confiable de la variabilidad del ritmo cardíaco. La HRV obtenida fue coherente con un patrón autónomo estable, y el contenido observado en las bandas LF y HF sugiere una regulación equilibrada entre la actividad simpática y parasimpática del sistema nervioso, lo cual es un indicador positivo de salud cardiovascular. Este tipo de análisis es útil no solo para evaluar el ritmo cardíaco, sino también para interpretar el estado del sistema nervioso autónomo en condiciones de reposo o estrés.
 
-## Referencias:
 
 
 
