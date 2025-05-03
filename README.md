@@ -11,5 +11,56 @@ En este laboratorio se analizó la variabilidad de la frecuencia cardíaca a par
 5. Interpretación de los resultados.
 
 ## Programación y datos: 
-1. Captura de la señal ecg:
+1. Carga de la señal ECG:
+Se carga el archivo de la captura de la señal con los datos de 5 minutos de ecg en los que el primero presenta fc alta y luego va disminuyendo hasta llegar a los 5, en el excel se muestra tiempo (eje temporal) y ecg (valores crudos del ECG).
+
+archivo = r"C:\Users\majo1\OneDrive\Escritorio\señales\lab señales\lab 4\ecg_data.csv"
+datos = np.loadtxt(archivo, delimiter=",", skiprows=1)
+
+tiempo = datos[:, 0]
+ecg = datos[:, 1]
+
+Eliminamos el desplazamiento de la señal con el valor medio. 
+
+ecg_sin_dc = ecg - np.mean(ecg)
+
+Se le aplica un filtro IIR de tipo pasa altas con frecuencia 20 Hz para eliminar los componentes de baja frecuencia como el ruido provocado por el movimiento corporal. 
+
+def filtro_pasa_altas(...):
+    # Diseña filtro Butterworth
+    b, a = butter(orden, normal, btype='highpass')
+    return filtfilt(b, a, senal)
+
+Se le aplica la envolvente de Hilbert con el fin de identificar los picos R. 
+
+envolvente = np.abs(hilbert(ecg_filtrada))
+
+También la transformada de Fourier para analizar el contenido frecuenaial de la señal filtrada
+
+magnitudes = np.abs(fft(ecg_filtrada))[:N//2]
+
+Por otro lado se genera archivos Excel con datos crudos, filtrados y la envolvente.
+
+guardar_excel("ecg_original.xlsx", tiempo, ecg, "ECG Original")
+
+Estas señales se ven así:
+
+![image](https://github.com/user-attachments/assets/4328d458-fc8b-49e2-8b8f-a16337ec3248)
+
+![image](https://github.com/user-attachments/assets/f96a2589-74b6-448a-8c6b-0dfec529953b)
+
+![image](https://github.com/user-attachments/assets/c19422dd-4a37-41cc-aa14-d1e3196657cb)
+
+Para la detección de los picos R se buscan máximos locales con una distancia mínima de 0.6 s entre picos para evitar falsos positivos. 
+
+picos_R, _ = find_peaks(ecg_filtrada, distance=fs*0.6, ...)
+
+
+![image](https://github.com/user-attachments/assets/579a1114-b13b-4e38-acd0-8f34f1a41f49)
+
+
+
+
+
+
 
