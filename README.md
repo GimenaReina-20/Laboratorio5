@@ -19,26 +19,23 @@ Se carga el archivo de la captura de la señal con los datos de 5 minutos de ecg
 
 Eliminamos el desplazamiento de la señal con el valor medio. 
 
-ecg_sin_dc = ecg - np.mean(ecg)
+![image](https://github.com/user-attachments/assets/ef2a4361-461e-4e7b-a671-4b8866e6a4ae)
 
 Se le aplica un filtro IIR de tipo pasa altas con frecuencia 20 Hz para eliminar los componentes de baja frecuencia como el ruido provocado por el movimiento corporal. 
 
-def filtro_pasa_altas(...):
-    # Diseña filtro Butterworth
-    b, a = butter(orden, normal, btype='highpass')
-    return filtfilt(b, a, senal)
+![image](https://github.com/user-attachments/assets/a3f47cdd-dc56-480f-8dbc-96ec752057a2)
 
 Se le aplica la envolvente de Hilbert con el fin de identificar los picos R. 
 
-envolvente = np.abs(hilbert(ecg_filtrada))
+![image](https://github.com/user-attachments/assets/b941acad-aaae-482f-a5d5-94ec392b4817)
 
 También la transformada de Fourier para analizar el contenido frecuenaial de la señal filtrada
 
-magnitudes = np.abs(fft(ecg_filtrada))[:N//2]
+![image](https://github.com/user-attachments/assets/880e7ab9-78d0-4c5e-a0cb-53b560965ac0)
 
 Por otro lado se genera archivos Excel con datos crudos, filtrados y la envolvente.
 
-guardar_excel("ecg_original.xlsx", tiempo, ecg, "ECG Original")
+![image](https://github.com/user-attachments/assets/051ea1fb-5788-4748-87ce-6772ed0ca7ee)
 
 Estas señales se ven así:
 
@@ -50,13 +47,19 @@ Estas señales se ven así:
 
 Para la detección de los picos R se buscan máximos locales con una distancia mínima de 0.6 s entre picos para evitar falsos positivos. 
 
-picos_R, _ = find_peaks(ecg_filtrada, distance=fs*0.6, ...)
+![image](https://github.com/user-attachments/assets/04f6073b-af03-4b29-9300-c525b98073d2)
+
+Los cuales se ven así:
 
 ![image](https://github.com/user-attachments/assets/579a1114-b13b-4e38-acd0-8f34f1a41f49)
 
 Por último aplicamos la transformada wavelet para analizar los componentes frecuenciales a lo largo del tiempo con un rango de frecuancias de  0.04–0.5 Hz ya que es la banda de interés para HRV. 
 
-coef, _ = pywt.cwt(ecg_filtrada, scales, 'cmor1.5-1.0', ...)
+![image](https://github.com/user-attachments/assets/bb811ec8-f495-4f52-9f74-c33c435046be)
+
+![image](https://github.com/user-attachments/assets/3fe174ee-0c47-4210-baba-fb82aca518f7)
+
+Se muestra de esta manera:
 
 ![image](https://github.com/user-attachments/assets/9097f53d-6d35-49de-8106-a57a6c5801c4)[
 
