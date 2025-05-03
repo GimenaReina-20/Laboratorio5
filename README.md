@@ -55,8 +55,23 @@ Para la detección de los picos R se buscan máximos locales con una distancia m
 
 picos_R, _ = find_peaks(ecg_filtrada, distance=fs*0.6, ...)
 
-
 ![image](https://github.com/user-attachments/assets/579a1114-b13b-4e38-acd0-8f34f1a41f49)
+
+Por último aplicamos la transformada wavelet para analizar los componentes frecuenciales a lo largo del tiempo con un rango de frecuancias de  0.04–0.5 Hz ya que es la banda de interés para HRV. 
+
+coef, _ = pywt.cwt(ecg_filtrada, scales, 'cmor1.5-1.0', ...)
+
+![image](https://github.com/user-attachments/assets/9097f53d-6d35-49de-8106-a57a6c5801c4)[
+
+## Análisis de resultados:
+
+
+## Conclusiones:
+
+## Referencias:
+
+
+
 
 
 
