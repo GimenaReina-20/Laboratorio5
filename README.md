@@ -7,11 +7,12 @@ En este laboratorio se analizó la variabilidad de la frecuencia cardíaca a par
 ### Actividad simpática y parasimpática del sistema nervioso autónomo
 El sistema nervioso autónomo (SNA) regula funciones involuntarias del cuerpo, como la frecuencia cardíaca, la presión arterial y la digestión. Se divide en dos ramas principales:
 
-- Simpática: Se activa en situaciones de estrés o emergencia ("respuesta de lucha o huida"), aumentando la frecuencia cardíaca, dilatando las pupilas y desviando el flujo sanguíneo hacia los músculos.
+- Simpática: Se activa en situaciones de estrés o emergencia (respuesta de lucha o huida), aumentando la frecuencia cardíaca, dilatando las pupilas y desviando el flujo sanguíneo hacia los músculos.
 
-- Parasimpática: Promueve la relajación y el ahorro de energía ("respuesta de reposo y digestión"), reduciendo la frecuencia cardíaca, estimulando la digestión y promoviendo el descanso.
+- Parasimpática: Promueve la relajación y el ahorro de energía (respuesta de reposo y digestión), reduciendo la frecuencia cardíaca, estimulando la digestión y promoviendo el descanso.
   
 ![image](https://github.com/user-attachments/assets/d594d302-1c2b-4ed9-a94c-3ab03cf8148d)
+
 
 ### Efecto de la actividad simpática y parasimpática en la frecuencia cardíaca
 
