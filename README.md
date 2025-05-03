@@ -14,11 +14,8 @@ En este laboratorio se analizó la variabilidad de la frecuencia cardíaca a par
 1. Carga de la señal ECG:
 Se carga el archivo de la captura de la señal con los datos de 5 minutos de ecg en los que el primero presenta fc alta y luego va disminuyendo hasta llegar a los 5, en el excel se muestra tiempo (eje temporal) y ecg (valores crudos del ECG).
 
-archivo = r"C:\Users\majo1\OneDrive\Escritorio\señales\lab señales\lab 4\ecg_data.csv"
-datos = np.loadtxt(archivo, delimiter=",", skiprows=1)
+![image](https://github.com/user-attachments/assets/569a6ff7-38ba-487f-a0e6-8f6767c24fe1)
 
-tiempo = datos[:, 0]
-ecg = datos[:, 1]
 
 Eliminamos el desplazamiento de la señal con el valor medio. 
 
