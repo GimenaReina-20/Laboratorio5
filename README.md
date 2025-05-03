@@ -22,6 +22,24 @@ El equilibrio entre estas dos ramas determina el ritmo basal del corazón y su a
 
 ![image](https://github.com/user-attachments/assets/81a8f0f2-bf9a-4393-9d59-7a64f1cd20a7)
 
+### Variabilidad de la frecuencia cardíaca (HRV)
+
+La HRV es la variación en el tiempo entre latidos cardíacos consecutivos, medido mediante los intervalos R-R en un electrocardiograma (ECG).
+Es un marcador no invasivo de la actividad del sistema nervioso autónomo y de la salud cardiovascular.
+
+Frecuencias de interés en HRV:
+- Alta frecuencia (HF) (0.15-0.4 Hz): refleja actividad parasimpática. 
+- Baja frecuencia (LF) (0.04-0.15 Hz): refleja actividad simpática y parasimpática combinadas.
+- Muy baja frecuencia (VLF) (<0.04 Hz): relacionada con mecanismos hormonales y termorregulación.
+
+![image](https://github.com/user-attachments/assets/73099da3-8605-45a2-b2f0-21dd31a0dc2b)
+
+La HRV, medida a través de las fluctuaciones en los intervalos R-R del electrocardiograma, permite analizar la influencia del sistema nervioso autónomo sobre el corazón. Las distintas bandas de frecuencia utilizadas en el análisis de HRV (alta, baja y muy baja frecuencia) proporcionan información valiosa sobre la actividad simpática y parasimpática, y su balance en distintos estados fisiológicos.
+
+Por su parte, el uso de la transformada Wavelet ha permitido un avance significativo en el análisis de señales biológicas. Esta herramienta permite descomponer señales complejas, como las del corazón, en diferentes escalas y frecuencias, facilitando la detección de patrones y cambios que no serían evidentes con otras técnicas. Gracias a su capacidad para trabajar con señales no estacionarias, la transformada Wavelet se ha convertido en un método esencial para el procesamiento y análisis de la HRV y otras señales fisiológicas.
+
+En conjunto, el estudio del sistema nervioso autónomo, la variabilidad de la frecuencia cardíaca y el uso de técnicas modernas de análisis como la transformada Wavelet, no solo amplía nuestra comprensión de la fisiología humana, sino que también mejora las herramientas de diagnóstico y monitoreo en la práctica clínica
+
 ## Diagrama de flujo
 ![image](https://github.com/user-attachments/assets/4580bdea-f575-46fa-8ea0-8af3424bc487)
 
