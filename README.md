@@ -2,6 +2,24 @@
 
 ## Introdución: 
 En este laboratorio se analizó la variabilidad de la frecuencia cardíaca a partir de señales ECG registradas en un experimento durante 5 minutos, donde el primer minuto correspondió a un estado de frecuencia cardíaca elevada y los siguientes minutos a reposo; el objetivo fue identificar y comparar los cambios en las frecuencias características del ritmo cardíaco por medio de la transformada Wavelet, esta es una herramienta matemática que permite descomponer señales biológicas en el dominio tiempo-frecuencia, facilitando la detección de variaciones rápidas y patrones asociados a la actividad simpática y parasimpática, lo que resulta útil para comprender la dinámica temporal de la señal cardíaca y la respuesta automática del organismo
+## Fundamento Teórico:
+
+### Actividad simpática y parasimpática del sistema nervioso autónomo
+El sistema nervioso autónomo (SNA) regula funciones involuntarias del cuerpo, como la frecuencia cardíaca, la presión arterial y la digestión. Se divide en dos ramas principales:
+
+- Simpática: Se activa en situaciones de estrés o emergencia ("respuesta de lucha o huida"), aumentando la frecuencia cardíaca, dilatando las pupilas y desviando el flujo sanguíneo hacia los músculos.
+
+- Parasimpática: Promueve la relajación y el ahorro de energía ("respuesta de reposo y digestión"), reduciendo la frecuencia cardíaca, estimulando la digestión y promoviendo el descanso.
+  
+![image](https://github.com/user-attachments/assets/d594d302-1c2b-4ed9-a94c-3ab03cf8148d)
+
+### Efecto de la actividad simpática y parasimpática en la frecuencia cardíaca
+
+La actividad simpática incrementa la frecuencia cardíaca al liberar noradrenalina, que actúa sobre los receptores β1-adrenérgicos del corazón.
+La actividad parasimpática disminuye la frecuencia cardíaca a través del nervio vago, liberando acetilcolina que actúa sobre receptores muscarínicos en el nodo sinoauricular.
+El equilibrio entre estas dos ramas determina el ritmo basal del corazón y su adaptación frente a estímulos internos o externos.
+
+![image](https://github.com/user-attachments/assets/81a8f0f2-bf9a-4393-9d59-7a64f1cd20a7)
 
 ## Diagrama de flujo
 ![image](https://github.com/user-attachments/assets/4580bdea-f575-46fa-8ea0-8af3424bc487)
